@@ -7,12 +7,12 @@ function setTimer()  {
 	const year = now.getFullYear();
 
 	
-	const hour = String(now.getHours()).padStart(2, '0');
+	const hours = String(now.getHours()).padStart(2, '0');
 	const min = String(now.getMinutes()).padStart(2, '0');
 	const sec = String(now.getSeconds()).padStart(2, '0');
 	
 	document.getElementById("timer").textContent =
-		 `${day}/${month}/${year}, ${hours}:${minutes}:${seconds}`;
+		 `${day}/${month}/${year}, ${hours}:${min}:${sec}`;
 }
 setTimer();
 setInterval(setTimer, 1000); 
